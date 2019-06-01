@@ -1,17 +1,17 @@
 pipeline {
          agent any
          stages {
-                 stage('Bulid') {
+                 stage('One') {
                  steps {
-                     echo 'Hi, this is jenkins'
+                     echo 'Hi, this is Zulaikha from edureka'
                  }
                  }
-                 stage('Unit Test') {
+                 stage('Two') {
                  steps {
                     input('Do you want to proceed?')
                  }
                  }
-                 stage('Deploy') {
+                 stage('Three') {
                  when {
                        not {
                             branch "master"
@@ -21,7 +21,7 @@ pipeline {
                        echo "Hello"
                  }
                  }
-                 stage('Auto test') {
+                 stage('Four') {
                  parallel { 
                             stage('Unit Test') {
                            steps {
